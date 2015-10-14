@@ -12,6 +12,6 @@ This product uses the NASS API but is not endorsed or certified by NASS.
 :license: MIT, see LICENSE for more details.
 """
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 from .api import NassApi
