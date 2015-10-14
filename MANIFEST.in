@@ -3,3 +3,5 @@ recursive-include docs *.rst conf.py Makefile make.bat
 recursive-include tests *
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
+recursive-exclude * .cache
+recursive-exclude * .coverage

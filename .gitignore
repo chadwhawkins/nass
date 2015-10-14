@@ -2,6 +2,7 @@
 *.egg
 *.egg-info
 dist
+.cache
 .coverage
 .tox
 docs/_build
