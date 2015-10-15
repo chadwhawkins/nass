@@ -7,6 +7,9 @@
 .. image:: https://img.shields.io/pypi/v/nass.svg
     :target: https://pypi.python.org/pypi/nass
 
+.. image:: https://img.shields.io/pypi/l/nass.svg
+    :target: https://raw.githubusercontent.com/nickfrostatx/nass/master/LICENSE
+
 ``nass`` is a wrapper around the public API for the USDA National Agricultural
 Statistics Service.
 
