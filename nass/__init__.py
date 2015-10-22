@@ -13,5 +13,7 @@ This product uses the NASS API but is not endorsed or certified by NASS.
 """
 
 __version__ = '0.1.1'
+__author__ = 'Nicholas Frost'
+__license__ = 'MIT'
 
 from .api import NassApi
