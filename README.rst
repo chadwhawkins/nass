@@ -2,7 +2,10 @@
 ========
 
 .. image:: https://img.shields.io/travis/nickfrostatx/nass.svg
-        :target: https://travis-ci.org/nickfrostatx/nass
+    :target: https://travis-ci.org/nickfrostatx/nass
+
+.. image:: https://img.shields.io/coveralls/nickfrostatx/nass.svg
+    :target: https://coveralls.io/github/nickfrostatx/nass
 
 .. image:: https://img.shields.io/pypi/v/nass.svg
     :target: https://pypi.python.org/pypi/nass
