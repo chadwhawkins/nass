@@ -38,7 +38,4 @@ setup(
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
-    extras_require={
-        'testing': ['pytest>=2.0.0'],
-    },
 )
