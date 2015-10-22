@@ -12,8 +12,8 @@ This product uses the NASS API but is not endorsed or certified by NASS.
 :license: MIT, see LICENSE for more details.
 """
 
+from .api import NassApi
+
 __author__ = 'Nick Frost'
 __version__ = '0.1.1'
 __license__ = 'MIT'
-
-from .api import NassApi
