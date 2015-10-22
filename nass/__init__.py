@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-USDA National Agricultural Statistics Service API wrapper
+USDA National Agricultural Statistics Service API wrapper.
 
 This Python wrapper implements the public API for the USDA National
-Agricultural Statistics Service. It is a very thin layer over the Requests
-package.
+Agricultural Statistics Service. It is a very thin layer over the
+Requests package.
 
 This product uses the NASS API but is not endorsed or certified by NASS.
 

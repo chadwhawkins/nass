@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Utility pytest fixtures for testing"""
+"""Utility pytest fixtures for testing."""
 
 from nass.api import NassApi
 import os
@@ -9,12 +9,11 @@ import requests
 
 @pytest.fixture
 def api():
-    """Construct a :class:`nass.api.NassApi` object
+    """Construct a :class:`nass.api.NassApi` object.
 
     Uses the environment variable NASS_API_KEY as the API key
 
     """
-
     key = os.environ.get('NASS_API_KEY')
     if not key:
         raise RuntimeError('No NASS_API_KEY environment variable set')
@@ -22,12 +21,11 @@ def api():
 
 
 def resp_func(status):
-    """Return a function that constructs a response with the given status code
+    """Construct a response with the given status code.
 
     :param status: Status code
 
     """
-
     def func():
         resp = requests.Response()
         resp.status_code = status

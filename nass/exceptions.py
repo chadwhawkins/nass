@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This module contains exceptions raised by this package
+This module contains exceptions raised by this package.
 
 All exceptions subclass NassException, you can use it to catch all
 exceptions
@@ -8,7 +8,8 @@ exceptions
 
 
 class NassException(Exception):
-    """Base exception class for an erroneous response
+
+    """Base exception class for an erroneous response.
 
     :param response: :class:`requests.Response` object
 
@@ -20,7 +21,8 @@ class NassException(Exception):
 
 
 class NetworkException(NassException):
-    """Something went wrong making the request to the server
+
+    """Something went wrong making the request to the server.
 
     Raised when a :class:`requests.exceptions.RequestException` is
     caught.
@@ -32,11 +34,13 @@ class NetworkException(NassException):
 
 
 class InvalidJson(NassException):
-    """Server returned malformed JSON"""
+
+    """Server returned malformed JSON."""
 
 
 class UnexpectedResponseData(NassException):
-    """Server returned different response data than we expected
+
+    """Server returned different response data than we expected.
 
     :param data: The data the server did return
     :param response: :class:`requests.Response` object
@@ -49,7 +53,8 @@ class UnexpectedResponseData(NassException):
 
 
 class ApiException(NassException):
-    """Base exception class for error messages returned by NASS
+
+    """Base exception class for error messages returned by NASS.
 
     :param message: Error message
     :param response: :class:`requests.Response` object
@@ -61,12 +66,13 @@ class ApiException(NassException):
         self.message = message
 
     def __str__(self):
-        """Return the error message"""
+        """Return the error message."""
         return 'Server returned error message \"%s\"' % self.message
 
 
 class ExceptionList(NassException):
-    """Raised when we get more than one error message
+
+    """Raised when we get more than one error message.
 
     :param errors: The list of error messages
     :param response: :class:`requests.Response` object
@@ -78,12 +84,13 @@ class ExceptionList(NassException):
         self.errors = errors
 
     def __str__(self):
-        """Return the comma-separated list of errors"""
+        """Return the comma-separated list of errors."""
         return 'Server returned error messages %s' % ', '.join(self.errors)
 
 
 class ExceedsRowLimit(ApiException):
-    """The request would return more than 50,000 records/rows
+
+    """The request would return more than 50,000 records/rows.
 
     :param rows: The row limit
     :param message: Error message
@@ -97,12 +104,15 @@ class ExceedsRowLimit(ApiException):
 
 
 class Unauthorized(ApiException):
-    """There is no key or invalid key parameter"""
+
+    """There is no key or invalid key parameter."""
 
 
 class InvalidQuery(ApiException):
-    """There is an error in the query string"""
+
+    """There is an error in the query string."""
 
 
 class BadMediaType(ApiException):
-    """The request format parameter is not JSON or CSV or XML"""
+
+    """The request format parameter is not JSON or CSV or XML."""

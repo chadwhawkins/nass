@@ -1,22 +1,21 @@
 # -*- coding: utf-8 -*-
-"""
-This module contains the Query object
-"""
+"""This module contains the Query object."""
 
 
 class Query(object):
-    """The Query class constructs the URL params for a request
 
-    :param api: The :class:`NassApi <nass.api.NassApi>` object
-
-    """
+    """The Query class constructs the URL params for a request."""
 
     def __init__(self, api):
+        """Initialize the :class:`Query <nass.query.Query>` object.
+
+        :param api: The :class:`NassApi <nass.api.NassApi>` object
+        """
         self.api = api
         self.params = {}
 
     def filter(self, param, value, op=None):
-        """Apply a filter to the query
+        """Apply a filter to the query.
 
         Returns the :class:`Query <nass.query.Query>` object, so this
         method is chainable.
@@ -32,7 +31,6 @@ class Query(object):
         :param op: (optional) Operator comparing param and value
         :return: :class:`Query <nass.query.Query>` object
         :rtype: nass.query.Query
-
         """
         if op is None:
             self.params[param] = value
@@ -44,18 +42,16 @@ class Query(object):
         return self
 
     def count(self):
-        """Pass count request to :class:`NassApi <nass.api.NassApi>`
+        """Pass count request to :class:`NassApi <nass.api.NassApi>`.
 
         :return: The number of rows in the result
         :rtype: int
-
         """
         return self.api.count_query(self)
 
     def execute(self):
-        """Pass query along to :class:`NassApi <nass.api.NassApi>`
+        """Pass query along to :class:`NassApi <nass.api.NassApi>`.
 
         :return: The results of the query
-
         """
         return self.api.call_query(self)
