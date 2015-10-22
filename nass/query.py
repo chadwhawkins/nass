@@ -4,13 +4,12 @@
 
 class Query(object):
 
-    """The Query class constructs the URL params for a request."""
+    """The Query class constructs the URL params for a request.
+
+    :param api: The :class:`NassApi <nass.api.NassApi>` object
+    """
 
     def __init__(self, api):
-        """Initialize the :class:`Query <nass.query.Query>` object.
-
-        :param api: The :class:`NassApi <nass.api.NassApi>` object
-        """
         self.api = api
         self.params = {}
 

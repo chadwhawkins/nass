@@ -10,6 +10,8 @@ class NassApi(object):
 
     """NASS API wrapper class.
 
+    :param key: API key
+
     Usage::
       >>> from nass import NassApi
       >>> api = NassApi('api key')
@@ -18,10 +20,6 @@ class NassApi(object):
     BASE_URL = 'http://quickstats.nass.usda.gov/api'
 
     def __init__(self, key):
-        """Initialize the :class:`NassApi <nass.NassApi>` object.
-
-        :param key: API key
-        """
         self.key = key
         self.http = requests.Session()
 
