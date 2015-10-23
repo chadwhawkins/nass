@@ -48,8 +48,8 @@ If something goes wrong communicating with NASS, an exception will be raised.
 This includes connection problems (e.g. timeout, DNS failure), as well as
 specific error messages.
 
-All exceptions subclass :class:`nass.exceptions.NassException`, so you can use
-it to catch all exceptions.
+All exceptions subclass ``NassException``, so you can use it to catch all
+exceptions.
 
 Documentation
 -------------
