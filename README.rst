@@ -1,5 +1,5 @@
-``nass``
-========
+nass
+====
 
 .. image:: https://img.shields.io/travis/nickfrostatx/nass.svg?style=flat-square
     :target: https://travis-ci.org/nickfrostatx/nass
