@@ -1,16 +1,16 @@
 nass
 ====
 
-.. image:: https://img.shields.io/travis/nickfrostatx/nass.svg?style=flat-square
+.. image:: https://img.shields.io/travis/nickfrostatx/nass.svg
     :target: https://travis-ci.org/nickfrostatx/nass
 
-.. image:: https://img.shields.io/coveralls/nickfrostatx/nass.svg?style=flat-square
+.. image:: https://img.shields.io/coveralls/nickfrostatx/nass.svg
     :target: https://coveralls.io/github/nickfrostatx/nass
 
-.. image:: https://img.shields.io/pypi/v/nass.svg?style=flat-square
+.. image:: https://img.shields.io/pypi/v/nass.svg
     :target: https://pypi.python.org/pypi/nass
 
-.. image:: https://img.shields.io/pypi/l/nass.svg?style=flat-square
+.. image:: https://img.shields.io/pypi/l/nass.svg
     :target: https://raw.githubusercontent.com/nickfrostatx/nass/master/LICENSE
 
 ``nass`` is a wrapper around the public API for the USDA National Agricultural
@@ -19,14 +19,14 @@ Statistics Service.
 Installation
 ------------
 
-::
+.. code-block:: bash
 
     $ pip install nass
 
 Usage
 -----
 
-::
+.. code-block:: python
 
     >>> import nass
     >>> api = nass.NassApi('your api key')
