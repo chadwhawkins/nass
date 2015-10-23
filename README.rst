@@ -54,5 +54,4 @@ exceptions.
 Documentation
 -------------
 
-You can find full documentation of the ``nass`` package at
-https://nass.readthedocs.org.
+The full documentation is at https://nass.rtfd.org.
