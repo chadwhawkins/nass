@@ -7,6 +7,9 @@ nass
 .. image:: https://img.shields.io/coveralls/nickfrostatx/nass.svg
     :target: https://coveralls.io/github/nickfrostatx/nass
 
+.. image:: https://img.shields.io/badge/docs-latest-brightgreen.svg
+    :target: https://nass.readthedocs.io/en/latest/
+
 .. image:: https://img.shields.io/pypi/v/nass.svg
     :target: https://pypi.python.org/pypi/nass
 
@@ -54,4 +57,4 @@ exceptions.
 Documentation
 -------------
 
-The full documentation is at https://nass.rtfd.org.
+The full documentation is at https://nass.readthedocs.io.
