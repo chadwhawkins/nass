@@ -24,7 +24,7 @@ setup(
     author_email='nickfrostatx@gmail.com',
     url='https://github.com/nickfrostatx/nass',
     packages=['nass'],
-    install_requires=['requests'],
+    install_requires=['requests', 'requests-cache'],
     license='MIT',
     classifiers=[
         'Development Status :: 5 - Production/Stable',

@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 """This module contains the high-level API object."""
 
+import datetime
 import requests
+import requests_cache
 from . import exceptions
 from .query import Query
 
@@ -19,9 +21,21 @@ class NassApi(object):
 
     BASE_URL = 'http://quickstats.nass.usda.gov/api'
 
-    def __init__(self, key):
+    def __init__(self, key, **kwargs):
         self.key = key
-        self.http = requests.Session()
+        self.use_cache = kwargs.get('use_cache', False)
+        cache_name = kwargs.get('cache_name', 'nass_cache')
+        cache_backend = kwargs.get('cache_backend', 'memory')
+        cache_expiration_minutes = kwargs.get('cache_expiration_minutes', 1440)  # 1 day
+
+        if not self.use_cache:
+            self.http = requests.Session()
+        else:
+            self.http = requests_cache.CachedSession(
+                cache_name=cache_name,
+                backend=cache_backend,
+                expire_after=datetime.timedelta(minutes=cache_expiration_minutes)
+            )
 
     def _api_request(self, url, params, field_name):
         """Make the HTTP request.
